@@ -1,0 +1,755 @@
+{
+    "ms_subclass": {
+        "dtype": "int64",
+        "required": true,
+        "min": 20.0,
+        "max": 190.0
+    },
+    "ms_zoning": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "RL",
+            "RM",
+            "FV",
+            "C (all)",
+            "RH",
+            "I (all)",
+            "A (agr)"
+        ]
+    },
+    "lot_frontage": {
+        "dtype": "float64",
+        "required": true,
+        "min": 21.0,
+        "max": 313.0
+    },
+    "lot_area": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1300.0,
+        "max": 215245.0
+    },
+    "street": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Pave",
+            "Grvl"
+        ]
+    },
+    "alley": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "None",
+            "Grvl",
+            "Pave"
+        ]
+    },
+    "lot_shape": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Reg",
+            "IR2",
+            "IR1",
+            "IR3"
+        ]
+    },
+    "land_contour": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Lvl",
+            "Low",
+            "HLS",
+            "Bnk"
+        ]
+    },
+    "utilities": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "AllPub",
+            "NoSewr",
+            "NoSeWa"
+        ]
+    },
+    "lot_config": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Inside",
+            "CulDSac",
+            "FR2",
+            "Corner",
+            "FR3"
+        ]
+    },
+    "land_slope": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Gtl",
+            "Sev",
+            "Mod"
+        ]
+    },
+    "neighborhood": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "NWAmes",
+            "ClearCr",
+            "NAmes",
+            "OldTown",
+            "NoRidge",
+            "CollgCr",
+            "Mitchel",
+            "Crawfor",
+            "Gilbert",
+            "SawyerW",
+            "Edwards",
+            "Somerst",
+            "BrkSide",
+            "NridgHt",
+            "Veenker",
+            "Timber",
+            "Sawyer",
+            "IDOTRR",
+            "NPkVill",
+            "MeadowV",
+            "Blueste",
+            "Greens",
+            "StoneBr",
+            "SWISU",
+            "Blmngtn",
+            "BrDale",
+            "Landmrk",
+            "GrnHill"
+        ]
+    },
+    "condition_1": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Norm",
+            "Artery",
+            "RRAn",
+            "Feedr",
+            "RRNe",
+            "PosN",
+            "RRAe",
+            "RRNn",
+            "PosA"
+        ]
+    },
+    "condition_2": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Norm",
+            "Artery",
+            "RRNn",
+            "RRAe",
+            "PosA",
+            "Feedr",
+            "PosN",
+            "RRAn"
+        ]
+    },
+    "bldg_type": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "1Fam",
+            "Duplex",
+            "2fmCon",
+            "TwnhsE",
+            "Twnhs"
+        ]
+    },
+    "house_style": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "1Story",
+            "2Story",
+            "SLvl",
+            "SFoyer",
+            "1.5Fin",
+            "1.5Unf",
+            "2.5Unf",
+            "2.5Fin"
+        ]
+    },
+    "overall_qual": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1.0,
+        "max": 10.0
+    },
+    "overall_cond": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1.0,
+        "max": 9.0
+    },
+    "year_built": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1872.0,
+        "max": 2010.0
+    },
+    "year_remod_add": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1950.0,
+        "max": 2010.0
+    },
+    "roof_style": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Gable",
+            "Flat",
+            "Hip",
+            "Mansard",
+            "Gambrel",
+            "Shed"
+        ]
+    },
+    "roof_matl": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "CompShg",
+            "Tar&Grv",
+            "Roll",
+            "WdShngl",
+            "WdShake",
+            "ClyTile",
+            "Membran",
+            "Metal"
+        ]
+    },
+    "exterior_first": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "HdBoard",
+            "Plywood",
+            "BrkFace",
+            "AsbShng",
+            "VinylSd",
+            "Wd Sdng",
+            "WdShing",
+            "MetalSd",
+            "CemntBd",
+            "BrkComm",
+            "Stucco",
+            "Stone",
+            "PreCast",
+            "AsphShn",
+            "ImStucc",
+            "CBlock"
+        ]
+    },
+    "exterior_second": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "HdBoard",
+            "Plywood",
+            "Stone",
+            "AsbShng",
+            "VinylSd",
+            "BrkFace",
+            "Wd Sdng",
+            "MetalSd",
+            "CmentBd",
+            "Brk Cmn",
+            "Wd Shng",
+            "Stucco",
+            "ImStucc",
+            "PreCast",
+            "CBlock",
+            "AsphShn"
+        ]
+    },
+    "mas_vnr_type": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "BrkFace",
+            "None",
+            "BrkCmn",
+            "Stone",
+            "CBlock"
+        ]
+    },
+    "mas_vnr_area": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 1290.0
+    },
+    "exter_qual": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "Fa",
+            "Gd",
+            "Ex"
+        ]
+    },
+    "exter_cond": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "Gd",
+            "Fa",
+            "Ex",
+            "Po"
+        ]
+    },
+    "foundation": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "CBlock",
+            "PConc",
+            "Slab",
+            "BrkTil",
+            "Stone",
+            "Wood"
+        ]
+    },
+    "bsmt_qual": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Gd",
+            "TA",
+            "None",
+            "Fa",
+            "Ex",
+            "Po"
+        ]
+    },
+    "bsmt_cond": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "Gd",
+            "None",
+            "Po",
+            "Fa",
+            "Ex"
+        ]
+    },
+    "bsmt_exposure": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "No",
+            "Gd",
+            "None",
+            "Av",
+            "Mn"
+        ]
+    },
+    "bsmtfin_type_1": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Unf",
+            "LwQ",
+            "None",
+            "GLQ",
+            "BLQ",
+            "ALQ",
+            "Rec"
+        ]
+    },
+    "bsmtfin_sf_1": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 5644.0
+    },
+    "bsmtfin_type_2": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Unf",
+            "ALQ",
+            "None",
+            "Rec",
+            "LwQ",
+            "GLQ",
+            "BLQ"
+        ]
+    },
+    "bsmtfin_sf_2": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 1526.0
+    },
+    "bsmt_unf_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 2336.0
+    },
+    "total_bsmt_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 6110.0
+    },
+    "heating": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "GasA",
+            "Wall",
+            "GasW",
+            "Grav",
+            "OthW",
+            "Floor"
+        ]
+    },
+    "heating_qc": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "Fa",
+            "Gd",
+            "Ex",
+            "Po"
+        ]
+    },
+    "central_air": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Y",
+            "N"
+        ]
+    },
+    "electrical": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "SBrkr",
+            "FuseF",
+            "FuseA",
+            "FuseP",
+            "Mix"
+        ]
+    },
+    "first_flr_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 334.0,
+        "max": 5095.0
+    },
+    "second_flr_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 2065.0
+    },
+    "low_qual_fin_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 1064.0
+    },
+    "gr_liv_area": {
+        "dtype": "int64",
+        "required": true,
+        "min": 334.0,
+        "max": 5642.0
+    },
+    "bsmt_full_bath": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 3.0
+    },
+    "bsmt_half_bath": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 2.0
+    },
+    "full_bath": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 4.0
+    },
+    "half_bath": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 2.0
+    },
+    "bedroom_abvgr": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 8.0
+    },
+    "kitchen_abvgr": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 3.0
+    },
+    "kitchen_qual": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "Fa",
+            "Gd",
+            "Ex"
+        ]
+    },
+    "totrms_abvgrd": {
+        "dtype": "int64",
+        "required": true,
+        "min": 2.0,
+        "max": 15.0
+    },
+    "functional": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Typ",
+            "Min2",
+            "Sev",
+            "Min1",
+            "Maj2",
+            "Mod",
+            "Maj1",
+            "Sal"
+        ]
+    },
+    "fireplaces": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 4.0
+    },
+    "fireplace_qu": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "0",
+            "Ex",
+            "Po",
+            "Gd",
+            "Fa"
+        ]
+    },
+    "garage_type": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Attchd",
+            "CarPort",
+            "Detchd",
+            "None",
+            "BuiltIn",
+            "Basment",
+            "2Types"
+        ]
+    },
+    "garage_yr_blt": {
+        "dtype": "float64",
+        "required": true,
+        "min": 1895.0,
+        "max": 2207.0
+    },
+    "garage_finish": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "RFn",
+            "Fin",
+            "Unf",
+            "None"
+        ]
+    },
+    "garage_cars": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 4.0
+    },
+    "garage_area": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 1488.0
+    },
+    "garage_qual": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "None",
+            "Gd",
+            "Fa",
+            "Po",
+            "Ex"
+        ]
+    },
+    "garage_cond": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "TA",
+            "None",
+            "Gd",
+            "Fa",
+            "Po",
+            "Ex"
+        ]
+    },
+    "paved_drive": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Y",
+            "N",
+            "P"
+        ]
+    },
+    "wood_deck_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 870.0
+    },
+    "open_porch_sf": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 742.0
+    },
+    "enclosed_porch": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 1012.0
+    },
+    "3ssn_porch": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 508.0
+    },
+    "screen_porch": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 576.0
+    },
+    "pool_area": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 800.0
+    },
+    "pool_qc": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "None",
+            "Ex",
+            "Fa",
+            "Gd",
+            "TA"
+        ]
+    },
+    "fence": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "MnPrv",
+            "None",
+            "GdWo",
+            "GdPrv",
+            "MnWw"
+        ]
+    },
+    "misc_feature": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "None",
+            "Shed",
+            "Gar2",
+            "Elev",
+            "Othr"
+        ]
+    },
+    "misc_val": {
+        "dtype": "int64",
+        "required": true,
+        "min": 0.0,
+        "max": 17000.0
+    },
+    "mo_sold": {
+        "dtype": "int64",
+        "required": true,
+        "min": 1.0,
+        "max": 12.0
+    },
+    "yr_sold": {
+        "dtype": "int64",
+        "required": true,
+        "min": 2006.0,
+        "max": 2010.0
+    },
+    "sale_type": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "WD ",
+            "Oth",
+            "New",
+            "COD",
+            "ConLD",
+            "ConLw",
+            "ConLI",
+            "VWD",
+            "CWD",
+            "Con"
+        ]
+    },
+    "sale_condition": {
+        "dtype": "object",
+        "required": true,
+        "allowed_values": [
+            "Family",
+            "Abnorml",
+            "Normal",
+            "Partial",
+            "AdjLand",
+            "Alloca"
+        ]
+    }
+}

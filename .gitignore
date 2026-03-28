@@ -7,9 +7,7 @@ __pycache__/
 venv/
 
 # MLflow (VERY IMPORTANT)
-mlflow_data/
-mlruns/
-model_artifacts/
+
 
 # OS
 .DS_Store

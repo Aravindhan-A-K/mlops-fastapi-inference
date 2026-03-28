@@ -7,6 +7,7 @@ __pycache__/
 .venv/
 venv/
 env/
+tests/
 
 mlflow_data/
 mlruns/
@@ -18,3 +19,4 @@ Thumbs.db
 
 Dockerfile
 docker-compose.yaml
+pytest.ini
