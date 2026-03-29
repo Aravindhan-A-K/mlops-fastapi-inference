@@ -23,4 +23,16 @@ services:
     environment:
       - MODEL_TRACKING_URI=http://mlflow:5000
       - ENVIRONMENT=Production
+  
+  test:
+    image: python:3.12-slim
+    container_name: tests
+    working_dir: /tests
+    depends_on:
+      - mlflow
+      - app
+    volumes:
+      - ./tests/test_integrations.py:/tests/test_integration.py
+    command: >
+      bash -c "pip install pytest requests && pytest /tests/test_integration -v"
 

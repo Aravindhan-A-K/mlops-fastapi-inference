@@ -1,4 +1,4 @@
-
+import json
 
 def load_schema():
     with open(r'/mlflow/model_artifacts/1/models/m-c9b8782d85e94044a200b6e9095e3238/artifacts/schemas.json', 'r') as f:
