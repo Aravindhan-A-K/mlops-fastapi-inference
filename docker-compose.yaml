@@ -9,13 +9,23 @@ services:
       - 5000:5000
     command: >
       bash -c "pip install mlflow && mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root /mlflow/model_artifacts --host 0.0.0.0 --port 5000 --allowed-hosts '*'"
-  
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 20s
+      retries: 5
+      start_period: 30s
+
   app:
     build: .
     container_name: app
     working_dir: /app
     depends_on:
       - mlflow
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 20s
+      retries: 5
+      start_period: 30s
     volumes:
       - ./mlflow_data:/mlflow
     ports:
@@ -30,7 +40,8 @@ services:
     working_dir: /tests
     depends_on:
       - mlflow
-      - app
+      - app:
+          condition: service_healthy
     volumes:
       - ./tests/test_integrations.py:/tests/test_integration.py
     command: >
