@@ -10,5 +10,5 @@ async def health_check():
     return {"Status": 'Ok'}
 
 @router.post('/predict', response_model=ResponseModel)
-async def predict(request: Request, data: RequestModel, background_tasks: BackgroundTasks, model=Depends(get_model())):
+async def predict(request: Request, data: RequestModel, background_tasks: BackgroundTasks, model=Depends(get_model)):
     return predict_service(request, data, background_tasks, model)
