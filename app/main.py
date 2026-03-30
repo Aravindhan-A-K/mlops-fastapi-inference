@@ -6,9 +6,9 @@ from app.core.exception_handler import register_exception
 
 app = FastAPI(title="MlOps app")
 
-#@app.on_event('startup')
-#async def start():
-  #  set_model()
+@app.on_event('startup')
+async def start():
+    set_model()
 
 app.add_middleware(Middleware)
 
